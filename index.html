@@ -31,16 +31,31 @@ layout: default
             <div class="col-lg-8 mx-auto">
                 <form id="contactForm" name="sentMessage" novalidate="novalidate">
                     <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" id="name" required="" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Name</label>
+                            <input class="form-control" type="text" id="name" required="" placeholder="Name" name="name">
+                            <small class="form-text text-danger help-block"></small>
+                        </div>
                     </div>
                     <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Email Address</label>
+                            <input class="form-control" type="email" id="email" required="" placeholder="Email Address" name="email">
+                            <small class="form-text text-danger help-block"></small>
+                        </div>
                     </div>
                     <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Phone Number</label>
+                            <input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number" name="phone">
+                            <small class="form-text text-danger help-block"></small>
+                        </div>
                     </div>
                     <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
+                        <div class="form-group floating-label-form-group controls mb-5 pb-2">
+                            <textarea class="form-control" id="message" required="" placeholder="Message" rows="5" name="message"></textarea>
+                            <small class="form-text text-danger help-block"></small>
+                        </div>
                     </div>
                     <div id="success"></div>
                     <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
