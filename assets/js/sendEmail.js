@@ -13,11 +13,12 @@ function sendEmail(expeditor, message) {
 } 
 
 $( "#contactForm" ).submit(function(e) {
+    e.preventDefault()
     const data = $( this ).serializeArray()
     const expeditor = `${data[0].value} (Email : ${data[1].value} - Phone : ${data[2].value})`
     const message = `${data[3].value}`
     sendEmail(expeditor, message)
     swal("Thanks!", "Your message has been sent", "success")
-    $(this).reset();
-    e.preventDefault();
+    $(this).reset()
+    
   });
