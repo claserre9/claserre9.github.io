@@ -1,7 +1,49 @@
----
-layout: default
-title: Pizza
----
+<header class="masthead bg-dark text-white text-center">
+    <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="assets/img/profile.png">
+        <h1>John Doe</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
+    </div>
+</header>
 
-<h1>{{ page.title }}</h1>
-<a href="/about">About</a>
+<section id="about" class="bg-primary text-white mb-0">
+    <div class="container">
+        <h2 class="text-uppercase text-center text-white">About</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+            <div class="col-lg-4 ml-auto">
+                <p class="lead">Freelancer is a free bootstrap theme. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+                <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+            </div>
+        </div>
+        <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download mr-2"></i><span>Download Now!</span></a></div>
+    </div>
+</section>
+<section id="contact">
+    <div class="container">
+        <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" id="name" required="" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
+                    </div>
+                    <div id="success"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
