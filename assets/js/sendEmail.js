@@ -1,7 +1,7 @@
 function sendEmail(expeditor, message) { 
     Email.send({
         Host : "smtp.gmail.com",
-        Username : "claserre9",
+        Username : "claserre9@gmail.com",
         Password : "jctqkgzfpkzvewgs",
         To : 'talmag9@gmail.com',
         From : expeditor,
