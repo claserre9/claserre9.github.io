@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "homepage": "https://claserre9.github.io/claserre9/",
   "scripts": {
     "serve:dev": "webpack serve --mode development",
-    "start:dev": "npm run build:dev",
+    "build:dev": "webpack --mode development",
     "serve:prod": "webpack serve --mode production",
-    "start": "npm run build"
+    "build": "webpack --mode production",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "knockout": "^3.5.1",

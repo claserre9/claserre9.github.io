@@ -2,7 +2,7 @@ import BaseViewModel from "./BaseViewModel";
 import {getFrenchResume, getEnglishResume} from "./resumes";
 
 export default class HomeViewModel extends BaseViewModel {
-  constructor(context: any) {
+  constructor(context: PageJS.Context|undefined) {
     super(context);
     // @ts-ignore
     if(this.context.path === '/en')
