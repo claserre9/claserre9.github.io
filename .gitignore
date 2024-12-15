@@ -7,3 +7,4 @@
 /.vscode/
 /.fleet/
 .DS_Store
+/dist/
