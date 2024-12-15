@@ -2,11 +2,18 @@ import { applyBindings, cleanNode, dataFor } from "knockout";
 
 export default class BaseViewModel {
   public template: string | undefined | null;
-  public context: any;
+  public context: PageJS.Context | undefined;
   public selector: any;
 
-  public render(selector: string = "app"): this {
+  constructor(context: PageJS.Context | undefined = undefined) {
+    this.template = null;
+    this.context = context;
+    this.selector = null;
+  }
+
+  public render(selector: string = "app", context: PageJS.Context | undefined = undefined): this {
     this.selector = selector;
+    this.setContext(context);
     this.load(selector);
     return this;
   }
@@ -23,7 +30,7 @@ export default class BaseViewModel {
     }
   }
 
-  public setContext(context: any): this {
+  public setContext(context: PageJS.Context | undefined): this {
     this.context = context;
     return this;
   }

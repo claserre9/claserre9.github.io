@@ -1,28 +1,32 @@
 import page from "page";
-import AppViewModel from "./components/AppViewModel";
+import HomeViewModel from "./components/HomeViewModel";
 import NotFoundViewModel from "./components/NotFoundViewModel";
+import AboutViewModel from "./components/AboutViewModel";
 
-// Dynamically set the base URL for file:// protocol
-const isFileProtocol = window.location.protocol === "file:";
-if (isFileProtocol) {
-  const base = window.location.pathname.replace(/\/index.html$/, "");
-  page.base(base);
-}
 
 // Middleware
 page("*", function (ctx, next) {
-  console.log("Middleware executed on route:", ctx.path);
+  console.log(`%c${ctx.path}`, 'color: white; background-color: blue; padding: 4px; border-radius: 4px;');
+  if (ctx.path === "/") {
+    page.redirect("/fr");
+  }
   next();
 });
 
-// Define the routes
-page("/", function () {
-  new AppViewModel().render();
+page("/:language", function (ctx, next) {
+  const homeViewModel = new HomeViewModel(ctx);
+  homeViewModel.render();
+});
+
+
+page("/about", function () {
+  const aboutViewModel = new AboutViewModel();
+  aboutViewModel.render();
 });
 
 page("*", function () {
-  new NotFoundViewModel().render();
+  const notFoundViewModel = new NotFoundViewModel();
+  notFoundViewModel.render();
 });
 
-// Initialize routing
 page();
