@@ -1,0 +1,10 @@
+/.idea/
+/node_modules
+# /public/index.html
+# /public/dist/
+
+/.idea/
+/.vscode/
+/.fleet/
+.DS_Store
+/dist/
