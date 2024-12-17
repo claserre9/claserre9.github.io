@@ -1,6 +1,6 @@
 import { applyBindings, cleanNode, dataFor } from "knockout";
 
-export default class BaseViewModel {
+export class BaseViewModel {
     public template: string | undefined | null;
     public context: PageJS.Context | undefined;
     public selector: any;
@@ -67,4 +67,13 @@ export default class BaseViewModel {
     protected onTemplateRendered(): void {
         console.log("Template rendered.");
     }
+
 }
+
+
+export const renderView = (ViewModel: new (context?: PageJS.Context) => any, context?: PageJS.Context): void => {
+    const viewModel = new ViewModel(context);
+    viewModel.render();
+};
+
+

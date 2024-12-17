@@ -1,4 +1,4 @@
-import BaseViewModel from "./BaseViewModel";
+import {BaseViewModel} from "./BaseViewModel";
 
 export default class NotFoundViewModel extends BaseViewModel {
     constructor() {

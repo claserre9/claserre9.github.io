@@ -1,4 +1,4 @@
-import BaseViewModel from "./BaseViewModel";
+import {BaseViewModel} from "./BaseViewModel";
 import {getFrenchResume, getEnglishResume} from "./resumes";
 
 export default class HomeViewModel extends BaseViewModel {
