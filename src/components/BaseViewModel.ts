@@ -1,4 +1,4 @@
-import {applyBindings, cleanNode, dataFor} from "knockout";
+import { applyBindings, cleanNode, dataFor } from "knockout";
 
 export default class BaseViewModel {
     public template: string | undefined | null;
@@ -15,6 +15,7 @@ export default class BaseViewModel {
         this.selector = selector;
         this.setContext(context);
         this.load(selector);
+        this.onTemplateRendered();
         return this;
     }
 
@@ -35,6 +36,15 @@ export default class BaseViewModel {
         return this;
     }
 
+    public getContext(): PageJS.Context | undefined {
+        return this.context;
+    }
+
+    public setTemplate(template: string | undefined | null): this {
+        this.template = template;
+        return this;
+    }
+
     public observableFrom(selector: string) {
         const element = document.getElementById(selector);
         if (!element) {
@@ -50,7 +60,11 @@ export default class BaseViewModel {
             cleanNode(container);
             applyBindings(this, container);
         } else {
-            console.error(`Element with id "${selector}" not found.`);
+            console.error(`Element with id "${selector}" not found or template is invalid.`);
         }
+    }
+
+    protected onTemplateRendered(): void {
+        console.log("Template rendered.");
     }
 }

@@ -1,32 +1,24 @@
 import page from "page";
 import HomeViewModel from "./components/HomeViewModel";
 import NotFoundViewModel from "./components/NotFoundViewModel";
-import AboutViewModel from "./components/AboutViewModel";
 
+// Constants for paths
+const PATH_ABOUT = "/about";
+const PATH_FR = "/";
+const PATH_EN = "/en";
 
-// Middleware
-page("*", function (ctx, next) {
-    console.log(`%c${ctx.path}`, 'color: white; background-color: blue; padding: 4px; border-radius: 4px;');
-    if (ctx.path === "/") {
-        page.redirect("/fr");
-    }
+function renderView(ViewModel: new (context?: PageJS.Context) => any, context?: PageJS.Context): void {
+    const viewModel = new ViewModel(context);
+    viewModel.render();
+}
+
+page("*", (context, next) => {
+    console.log(`%c${context.path}`, 'color: white; background-color: blue; padding: 4px; border-radius: 4px;');
     next();
 });
 
-page("/:language", function (ctx, next) {
-    const homeViewModel = new HomeViewModel(ctx);
-    homeViewModel.render();
-});
-
-
-page("/about", function () {
-    const aboutViewModel = new AboutViewModel();
-    aboutViewModel.render();
-});
-
-page("*", function () {
-    const notFoundViewModel = new NotFoundViewModel();
-    notFoundViewModel.render();
-});
+page(PATH_FR, (context) => renderView(HomeViewModel, context));
+page(PATH_EN, (context) => renderView(HomeViewModel, context));
+page("*", () => renderView(NotFoundViewModel));
 
 page();

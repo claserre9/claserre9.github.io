@@ -9,7 +9,7 @@ export function getFrenchResume() {
                LinkedIn : <a href="https://linkedin.com/in/cliffordlaserre" target="_blank" class="text-white">Clifford Laserre</a></p>
                
             <div class="mt-3">
-                <a href="/fr" class="btn btn-light">Français</a>
+                <a href="/" class="btn btn-light">Français</a>
                 <a href="/en" class="btn btn-light">English</a>
             </div>
         </div>
@@ -99,7 +99,7 @@ export function getEnglishResume() {
                GitHub: <a href="https://github.com/claserre9" target="_blank" class="text-white">claserre9</a> | 
                LinkedIn: <a href="https://linkedin.com/in/cliffordlaserre" target="_blank" class="text-white">Clifford Laserre</a></p>
             <div class="mt-3">
-                <a href="/fr" class="btn btn-light">Français</a>
+                <a href="/" class="btn btn-light">Français</a>
                 <a href="/en" class="btn btn-light">English</a>
             </div>
         </div>
