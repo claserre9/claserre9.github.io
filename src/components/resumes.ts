@@ -1,4 +1,11 @@
+import {applyBindings, observable} from "knockout";
+const viewModel = {
+    year: observable(new Date().getFullYear())
+};
+applyBindings(viewModel);
+
 export function getFrenchResume() {
+
     return `
     <header class="bg-primary text-white text-center py-4">
         <div class="container">
@@ -18,7 +25,12 @@ export function getFrenchResume() {
     <main class="container my-5">
         <section class="mb-4">
             <h2 class="text-primary">Résumé</h2>
-            <p>Développeur backend avec plus de trois ans d'expérience dans la conception et le développement d'applications web performantes et évolutives. Mes compétences couvrent des technologies modernes comme PHP, Symfony, Node.js et Django. Contributeur actif à des projets open-source, je suis passionné par la création de solutions techniques élégantes qui résolvent des problèmes complexes de manière durable.</p>
+            <p>Développeur backend avec plus de trois ans d'expérience dans la conception et le
+développement d'applications web performantes et évolutives. Solides compétences en
+PHP, Symfony, Node.js, et Django, avec une maîtrise des outils de gestion de contenu (CMS),
+de l'optimisation des performances, et de la correction des bugs. Contributeur actif à des
+projets open-source, je suis passionné par la résolution de problèmes complexes grâce à des
+solutions élégantes et évolutives.</p>
         </section>
 
         <section class="mb-4">
@@ -28,10 +40,33 @@ export function getFrenchResume() {
                 <h4>Développeur Backend - Valnet Inc, Montréal</h4>
                 <p><em>mai 2021 – jusqu’à date</em></p>
                 <ul>
-                    <li>Conception et intégration de nouvelles fonctionnalités dans un CMS interne en utilisant des frameworks avancés comme Slim et Doctrine pour des sites à fort trafic.</li>
-                    <li>Amélioration des performances des sites web grâce à l'implémentation de solutions de mise en cache avancées avec Redis, réduisant les temps de chargement jusqu'à 50 %.</li>
-                    <li>Optimisation des bases de données MySQL en refactorisant les schémas et en créant des requêtes complexes, garantissant des performances élevées sous forte charge.</li>
-                    <li>Identification et résolution rapide de bugs critiques, couplée à des tests unitaires et fonctionnels rigoureux, pour des déploiements fiables et sans interruption.</li>
+                    <li>
+                    Conception et développement de nouvelles fonctionnalités pour le CMS interne en
+                    utilisant les framework Slim, Doctrine, et Knockout.js. Ces fonctionnalités
+                    permettent de faciliter la gestion de contenu pour des sites à fort trafic et
+                    d'améliorer la productivité des équipes.
+                    </li>
+                    <li>
+                    Optimisation des performances des sites web en implémentant des stratégies de
+                    mise en cache avec Redis. Cette optimisation a permis de réduire les temps de
+                    chargement des pages de manière significative, améliorant ainsi l'expérience
+                    utilisateur sous forte charge de trafic.
+                    </li>
+                    <li>
+                    Maintenance et optimisation des bases de données MySQL et Redis. Refactorisation
+                    des schémas de base de données et amélioration des requêtes complexes pour
+                    assurer une performance maximale.
+                    </li>
+                    <li>
+                    Correction des bugs critiques dans les systèmes backend et frontend, en utilisant
+                    des tests unitaires rigoureux pour garantir des déploiements sans erreurs et une
+                    stabilité continue.
+                    </li>
+                    <li>
+                    Contribution à la publication de contenu via des sites web utilisant le framework
+                    Symfony, en assurant une gestion fluide des versions et en respectant les exigences
+                    de haute qualité des plateformes de contenu de Valnet.
+                    </li>
                 </ul>
             </div>
 
@@ -39,9 +74,22 @@ export function getFrenchResume() {
                 <h4>Technicien en administration (Intelligence d’affaires) - CIUSSS, Montréal</h4>
                 <p><em>Décembre 2019 - mai 2021</em></p>
                 <ul>
-                    <li>Création de rapports analytiques interactifs et automatisés à l’aide de Power BI et SQL Server, fournissant des insights précis pour la prise de décisions stratégiques.</li>
-                    <li>Conception et automatisation de processus ETL complexes pour intégrer et transformer de grandes quantités de données issues de multiples sources, améliorant l'efficacité de 30 %.</li>
-                    <li>Optimisation des performances des bases de données en affinant les requêtes SQL, réduisant significativement les temps d’exécution des rapports.</li>
+                    <li>
+                    Développement de rapports analytiques complexes pour divers départements en
+                    utilisant SQL Server et Power BI, facilitant la prise de décisions importantes grâce à
+                    des tableaux de bord interactifs et des rapports automatisés.
+                    </li>
+                    <li>
+                    Conception et automatisation de processus de gestion de données (ETL) pour
+                    extraire, transformer, et charger des données depuis des entrepôts de données. Ces
+                    automatisations ont permis de réduire considérablement le temps consacré aux
+                    tâches manuelles et d’améliorer l'efficacité des équipes de gestion de données.
+                    </li>
+                    <li>
+                    Amélioration des performances des bases de données en optimisant les requêtes
+                    SQL, ce qui a entraîné une accélération notable des temps de génération des
+                    rapports et une amélioration de l’accès aux données.
+                    </li>
                 </ul>
             </div>
 
@@ -49,9 +97,18 @@ export function getFrenchResume() {
                 <h4>Développeur Indépendant - Appanoo Labs, Montréal</h4>
                 <p><em>Octobre 2018 - Décembre 2020</em></p>
                 <ul>
-                    <li>Collaboration étroite avec des startups pour identifier leurs besoins techniques et développer des applications web sur mesure avec Django et Node.js.</li>
-                    <li>Développement d'APIs RESTful robustes, permettant une intégration fluide entre différents systèmes et services tiers.</li>
-                    <li>Mise en œuvre de pipelines CI/CD modernes avec Docker et Heroku, réduisant le temps de déploiement et augmentant la fiabilité des mises à jour.</li>
+                    <li>
+                    Accompagnement des startups et PME dans la définition de leurs besoins techniques
+                    et la mise en place d'applications web personnalisées, en utilisant Django et Node.js.
+                    </li>
+                    <li>
+                    Développement et intégration d'APIs RESTful pour des applications web et mobiles,
+                    facilitant la communication entre divers systèmes internes et services externes.
+                    </li>
+                    <li>
+                    Mise en œuvre de pipelines CI/CD avec Docker et Heroku, réduisant ainsi les temps
+                    de déploiement et améliorant l'efficacité des mises à jour continues des applications.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -59,8 +116,16 @@ export function getFrenchResume() {
         <section class="mb-4">
             <h2 class="text-primary">Projets Open-Source</h2>
             <ul>
-                <li><strong>Wakatime Stats (2023)</strong> : Création d’un outil en PHP qui intègre automatiquement les statistiques Wakatime dans les fichiers README GitHub, démontrant une expertise en automatisation et utilisation d’APIs.</li>
-                <li><strong>Knockout JS Scanner (2024)</strong> : Développement d’une extension Chrome en TypeScript pour inspecter les données Knockout.js dans le DOM, facilitant ainsi le travail des développeurs frontend.</li>
+                <li><strong>Wakatime Stats (2023)</strong> : 
+                Développement d'un outil en PHP qui met à jour les
+                statistiques Wakatime dans les fichiers README de GitHub, démontrant une bonne
+                maîtrise des APIs et de l’automatisation.
+                </li>
+                <li><strong>Knockout JS Scanner (2024)</strong> : 
+                Création d'une extension Chrome en TypeScript
+                permettant d’afficher les données Knockout.js associées aux éléments DOM
+                sélectionnés, facilitant ainsi le développement frontend.
+                </li>
             </ul>
         </section>
 
@@ -82,7 +147,7 @@ export function getFrenchResume() {
     </main>
 
     <footer class="bg-light text-center py-3">
-        <p>© 2024 Clifford Laserre. Références disponibles sur demande.</p>
+        <p>©<span data-bind="text: year"></span>  Clifford Laserre. Références disponibles sur demande.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -90,6 +155,7 @@ export function getFrenchResume() {
 }
 
 export function getEnglishResume() {
+
   return`
     <header class="bg-primary text-white text-center py-4">
         <div class="container">
@@ -171,8 +237,8 @@ export function getEnglishResume() {
         </section>
     </main>
 
-    <footer class="bg-light text-center py-3">
-        <p>© 2024 Clifford Laserre. References available upon request.</p>
+    <footer id="footer" class="bg-light text-center py-3">
+        <p>©<span data-bind="text: year"></span> Clifford Laserre. References available upon request.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
