@@ -1,9 +1,3 @@
-import {applyBindings, observable} from "knockout";
-const viewModel = {
-    year: observable(new Date().getFullYear())
-};
-applyBindings(viewModel);
-
 export function getFrenchResume() {
 
     return `
@@ -156,7 +150,7 @@ solutions élégantes et évolutives.</p>
 
 export function getEnglishResume() {
 
-  return`
+    return `
     <header class="bg-primary text-white text-center py-4">
         <div class="container">
             <h1>Clifford Laserre</h1>
@@ -164,8 +158,9 @@ export function getEnglishResume() {
             <p>Email: <a href="mailto:claserre9@gmail.com" class="text-white">claserre9@gmail.com</a> | 
                GitHub: <a href="https://github.com/claserre9" target="_blank" class="text-white">claserre9</a> | 
                LinkedIn: <a href="https://linkedin.com/in/cliffordlaserre" target="_blank" class="text-white">Clifford Laserre</a></p>
+               
             <div class="mt-3">
-                <a href="/" class="btn btn-light">Français</a>
+                <a href="/" class="btn btn-light">French</a>
                 <a href="/en" class="btn btn-light">English</a>
             </div>
         </div>
@@ -174,30 +169,64 @@ export function getEnglishResume() {
     <main class="container my-5">
         <section class="mb-4">
             <h2 class="text-primary">Summary</h2>
-            <p>Backend developer with over three years of experience designing and developing high-performance and scalable web applications. Skilled in modern technologies like PHP, Symfony, Node.js, and Django. Active contributor to open-source projects, passionate about crafting elegant technical solutions that solve complex problems sustainably.</p>
+            <p>Backend developer with over three years of experience in designing and developing 
+high-performance and scalable web applications. Strong skills in PHP, Symfony, Node.js, and Django, 
+with expertise in content management systems (CMS), performance optimization, and bug fixing. 
+An active contributor to open-source projects, I am passionate about solving complex problems 
+with elegant and scalable solutions.</p>
         </section>
 
         <section class="mb-4">
-            <h2 class="text-primary">Professional Experience</h2>
+            <h2 class="text-primary">Work Experience</h2>
 
             <div class="mb-3">
                 <h4>Backend Developer - Valnet Inc, Montreal</h4>
                 <p><em>May 2021 – Present</em></p>
                 <ul>
-                    <li>Designed and integrated new features into an internal CMS using advanced frameworks like Slim and Doctrine for high-traffic websites.</li>
-                    <li>Enhanced website performance by implementing advanced caching solutions with Redis, reducing load times by up to 50%.</li>
-                    <li>Optimized MySQL databases by refactoring schemas and crafting complex queries, ensuring high performance under heavy load.</li>
-                    <li>Quickly identified and resolved critical bugs, paired with rigorous unit and functional testing for reliable, interruption-free deployments.</li>
+                    <li>
+                    Designed and developed new features for the internal CMS using Slim, Doctrine, 
+                    and Knockout.js frameworks. These features improved content management for 
+                    high-traffic websites and enhanced team productivity.
+                    </li>
+                    <li>
+                    Optimized website performance by implementing caching strategies with Redis. 
+                    This significantly reduced page load times, enhancing user experience under 
+                    heavy traffic loads.
+                    </li>
+                    <li>
+                    Maintained and optimized MySQL and Redis databases. Refactored database schemas 
+                    and improved complex queries to ensure maximum performance.
+                    </li>
+                    <li>
+                    Fixed critical bugs in backend and frontend systems using rigorous unit testing 
+                    to guarantee error-free deployments and continuous stability.
+                    </li>
+                    <li>
+                    Contributed to content publishing on websites using the Symfony framework, 
+                    ensuring smooth version management and meeting Valnet’s high-quality content 
+                    platform requirements.
+                    </li>
                 </ul>
             </div>
 
             <div class="mb-3">
-                <h4>Administrative Technician (Business Intelligence) - CIUSSS, Montreal</h4>
+                <h4>Business Intelligence Administrator - CIUSSS, Montreal</h4>
                 <p><em>December 2019 - May 2021</em></p>
                 <ul>
-                    <li>Created interactive and automated analytical reports using Power BI and SQL Server, providing precise insights for strategic decision-making.</li>
-                    <li>Designed and automated complex ETL processes to integrate and transform large datasets from multiple sources, improving efficiency by 30%.</li>
-                    <li>Optimized database performance by refining SQL queries, significantly reducing report execution times.</li>
+                    <li>
+                    Developed complex analytical reports for various departments using SQL Server and 
+                    Power BI, facilitating key decision-making through interactive dashboards and 
+                    automated reports.
+                    </li>
+                    <li>
+                    Designed and automated data management (ETL) processes to extract, transform, 
+                    and load data from data warehouses. These automations significantly reduced 
+                    manual work and improved data management team efficiency.
+                    </li>
+                    <li>
+                    Improved database performance by optimizing SQL queries, leading to faster 
+                    report generation and better data accessibility.
+                    </li>
                 </ul>
             </div>
 
@@ -205,9 +234,18 @@ export function getEnglishResume() {
                 <h4>Freelance Developer - Appanoo Labs, Montreal</h4>
                 <p><em>October 2018 - December 2020</em></p>
                 <ul>
-                    <li>Collaborated closely with startups to identify technical requirements and develop tailored web applications using Django and Node.js.</li>
-                    <li>Developed robust RESTful APIs, enabling seamless integration between various systems and third-party services.</li>
-                    <li>Implemented modern CI/CD pipelines using Docker and Heroku, reducing deployment time and increasing update reliability.</li>
+                    <li>
+                    Assisted startups and SMEs in defining their technical needs and implementing 
+                    custom web applications using Django and Node.js.
+                    </li>
+                    <li>
+                    Developed and integrated RESTful APIs for web and mobile applications, enabling 
+                    seamless communication between internal systems and external services.
+                    </li>
+                    <li>
+                    Implemented CI/CD pipelines using Docker and Heroku, reducing deployment times 
+                    and improving application update efficiency.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -215,8 +253,14 @@ export function getEnglishResume() {
         <section class="mb-4">
             <h2 class="text-primary">Open-Source Projects</h2>
             <ul>
-                <li><strong>Wakatime Stats (2023)</strong>: Created a PHP tool to automatically integrate Wakatime statistics into GitHub README files, showcasing expertise in automation and API usage.</li>
-                <li><strong>Knockout JS Scanner (2024)</strong>: Developed a Chrome extension in TypeScript to inspect Knockout.js data in the DOM, simplifying frontend development workflows.</li>
+                <li><strong>Wakatime Stats (2023)</strong>: 
+                Developed a PHP tool that updates Wakatime statistics in GitHub README files, 
+                demonstrating strong API and automation skills.
+                </li>
+                <li><strong>Knockout JS Scanner (2024)</strong>: 
+                Created a Chrome extension in TypeScript that displays Knockout.js data associated 
+                with selected DOM elements, facilitating frontend development.
+                </li>
             </ul>
         </section>
 
@@ -237,10 +281,10 @@ export function getEnglishResume() {
         </section>
     </main>
 
-    <footer id="footer" class="bg-light text-center py-3">
-        <p>©<span data-bind="text: year"></span> Clifford Laserre. References available upon request.</p>
+    <footer class="bg-light text-center py-3">
+        <p>©<span data-bind="text: year"></span>  Clifford Laserre. References available upon request.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-`
+`;
 }
