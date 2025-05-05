@@ -1,6 +1,100 @@
+const getStyles = () => `
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #0d6efd, #2563eb);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+        }
+
+        header p.lead {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .btn-light {
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            border-radius: 30px;
+            padding: 0.5rem 1.2rem;
+        }
+
+        .btn-light:hover {
+            background-color: #dbeafe;
+            color: #0d6efd;
+        }
+
+        main .container {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+        }
+
+        h2.text-primary {
+            border-bottom: 3px solid #0d6efd;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+
+        ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #f1f5f9;
+            font-size: 0.9rem;
+            padding: 1rem 0;
+            box-shadow: inset 0 1px 0 rgba(0,0,0,0.05);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.text-white:hover {
+            text-decoration: underline;
+            color: #d1e3ff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+`
+
 export function getFrenchResume() {
 
     return `
+    ${getStyles()}
     <header class="bg-primary text-white text-center py-4">
         <div class="container">
             <h1>Clifford Laserre</h1>
@@ -151,6 +245,7 @@ solutions élégantes et évolutives.</p>
 export function getEnglishResume() {
 
     return `
+    ${getStyles()}
     <header class="bg-primary text-white text-center py-4">
         <div class="container">
             <h1>Clifford Laserre</h1>
