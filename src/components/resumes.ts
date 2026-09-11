@@ -275,9 +275,11 @@ const getStyles = () => `
 
         .badge-lang  { background: #ede9fe; color: #5b21b6; border-color: #c4b5fd; }
         .badge-fw    { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+        .badge-front { background: #fce7f3; color: #9d174d; border-color: #f9a8d4; }
         .badge-db    { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
         .badge-tools { background: #f3e8ff; color: #6b21a8; border-color: #d8b4fe; }
         .badge-meth  { background: #e0f2fe; color: #0c4a6e; border-color: #7dd3fc; }
+        .badge-ai    { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
 
         /* ── Education ── */
         .edu-card {
@@ -392,8 +394,9 @@ export function getFrenchResume() {
         <div class="container text-center">
             <div class="avatar">CL</div>
             <h1>Clifford Laserre</h1>
-            <p class="subtitle">Développeur Full Stack · PHP · Node.js · Python</p>
+            <p class="subtitle">Développeur Full Stack · PHP / Symfony</p>
             <div class="contact-links">
+                <a href="tel:+15149675802"><i class="bi bi-telephone-fill"></i> 514-967-5802</a>
                 <a href="mailto:claserre9@gmail.com"><i class="bi bi-envelope-fill"></i> claserre9@gmail.com</a>
                 <a href="https://github.com/claserre9" target="_blank"><i class="bi bi-github"></i> claserre9</a>
                 <a href="https://linkedin.com/in/cliffordlaserre" target="_blank"><i class="bi bi-linkedin"></i> Clifford Laserre</a>
@@ -410,12 +413,12 @@ export function getFrenchResume() {
         <section>
             <div class="section-title"><i class="bi bi-person-lines-fill"></i> Profil</div>
             <p class="summary-text">
-                Développeur Full Stack avec plus de <strong>5 ans d’expérience</strong> dans la conception et le développement
-                d’applications web performantes et évolutives. Expert en <strong>PHP, Symfony, Node.js et Django</strong>,
-                avec une solide maîtrise des systèmes de gestion de contenu (CMS), de l’optimisation des performances
-                et de l’intégration de bases de données relationnelles et NoSQL. Contributeur actif à des projets
-                open-source, passionné par la résolution de problèmes complexes au moyen de solutions
-                architecturées avec soin.
+                Développeur full stack avec <strong>7 ans d’expérience</strong>, dont l’essentiel en <strong>PHP et Symfony</strong>,
+                à concevoir, optimiser et maintenir des systèmes web à fort trafic (<strong>10 M+ visiteurs/mois</strong>) dans un
+                environnement d’équipe. Solide maîtrise de l’écosystème Symfony (Doctrine ORM, architecture MVC, APIs REST),
+                complétée par une solide expérience <strong>Django/Python</strong> et <strong>Node.js</strong>. Habitué à la revue de code, aux tests automatisés
+                et à la documentation dans un contexte de collaboration étroite avec plusieurs équipes. Attaché à la qualité
+                de code, à la maintenabilité et à la performance des applications livrées.
             </p>
         </section>
 
@@ -430,14 +433,16 @@ export function getFrenchResume() {
                             <div class="job-title">Développeur Full Stack</div>
                             <div class="job-company"><i class="bi bi-building"></i> Valnet Inc — Montréal, QC</div>
                         </div>
-                        <span class="job-period">Mai 2021 – Présent</span>
+                        <span class="job-period">Mai 2021 – Août 2026</span>
                     </div>
                     <ul>
-                        <li>Conception et développement de nouvelles fonctionnalités pour le CMS interne avec <strong>Slim Framework, Doctrine ORM et Knockout.js</strong>, supportant des plateformes à plus de <strong>10 millions de visiteurs mensuels</strong>.</li>
-                        <li>Réduction des temps de chargement de <strong>40 %</strong> grâce à l’implémentation de stratégies de mise en cache avancées avec <strong>Redis</strong> (cache de requêtes, sessions, données applicatives).</li>
-                        <li>Optimisation des bases de données <strong>MySQL et Redis</strong> : refactorisation de schémas, réécriture de requêtes critiques et ajout d’index ciblés pour améliorer les performances sous forte charge.</li>
-                        <li>Mise en place de tests unitaires et d’intégration (PHPUnit) permettant de réduire le taux d’incidents en production de façon significative et de fiabiliser les déploiements continus.</li>
-                        <li>Participation active aux cycles de publication de contenu via <strong>Symfony</strong>, en assurant la qualité du code, la revue de merge requests et le respect des standards de l’équipe.</li>
+                        <li>Développement et maintenance d’un <strong>CMS interne critique</strong> (PHP/Slim, Doctrine ORM, Knockout.js) opéré en continu par les équipes éditoriales, sur des plateformes à plus de <strong>10 M de visiteurs mensuels</strong> — priorité constante à la fiabilité et à la clarté du code livré.</li>
+                        <li>Collaboration étroite avec les équipes éditoriales et produit pour clarifier les besoins, arbitrer entre dette technique et sur-ingénierie, et livrer des fonctionnalités adaptées aux contraintes réelles des utilisateurs internes.</li>
+                        <li>Conception et déploiement de suites de tests <strong>PHPUnit</strong> (unitaires et intégration) intégrées aux pipelines de déploiement continu, réduisant significativement les incidents en production.</li>
+                        <li>Développement de bout en bout : modélisation des données, APIs REST internes, interfaces applicatives <strong>TypeScript/Knockout.js</strong> et outillage de déploiement — cohérence technique assurée sur toute la chaîne.</li>
+                        <li>Réduction de <strong>40 %</strong> des temps de chargement via une stratégie de cache <strong>Redis</strong> multi-niveaux (requêtes, sessions, données applicatives).</li>
+                        <li>Optimisation de schémas et de requêtes <strong>MySQL</strong> sous forte charge : refactorisation des requêtes critiques, indexation ciblée, analyse de plans d’exécution.</li>
+                        <li>Migrations et changements déployés avec un souci constant de minimiser le temps d’arrêt sur des systèmes en production continue.</li>
                     </ul>
                 </div>
 
@@ -446,14 +451,14 @@ export function getFrenchResume() {
                     <div class="job-header">
                         <div>
                             <div class="job-title">Technicien en intelligence d’affaires</div>
-                            <div class="job-company"><i class="bi bi-building"></i> CIUSSS — Montréal, QC</div>
+                            <div class="job-company"><i class="bi bi-building"></i> CIUSSS du Centre-Sud-de-l'Île-de-Montréal — Montréal, QC</div>
                         </div>
                         <span class="job-period">Déc. 2019 – Mai 2021</span>
                     </div>
                     <ul>
-                        <li>Développement de <strong>tableaux de bord Power BI</strong> et de rapports analytiques pour plus de <strong>8 départements</strong>, permettant d’accélérer la prise de décision clinique et administrative.</li>
-                        <li>Conception et automatisation de pipelines <strong>ETL</strong> (SQL Server Integration Services) réduisant le temps de traitement manuel de données de <strong>60 %</strong>.</li>
-                        <li>Optimisation de requêtes <strong>SQL Server</strong> complexes (plans d’exécution, indexation, vues matérialisées) améliorant la vitesse de génération des rapports de plus de <strong>50 %</strong>.</li>
+                        <li>Optimisation de requêtes <strong>SQL Server</strong> complexes (indexation, vues matérialisées, réécriture) améliorant de <strong>50 %</strong> la génération des rapports sur des volumes de données importants.</li>
+                        <li>Automatisation de pipelines <strong>ETL</strong> (SSIS) réduisant de <strong>60 %</strong> le temps de traitement manuel des données.</li>
+                        <li>Conception et déploiement de <strong>tableaux de bord Power BI</strong> pour plus de <strong>8 départements</strong>, en collaboration directe avec les partenaires d’affaires pour traduire des besoins métier en indicateurs actionnables.</li>
                     </ul>
                 </div>
 
@@ -461,15 +466,16 @@ export function getFrenchResume() {
                     <div class="timeline-dot"></div>
                     <div class="job-header">
                         <div>
-                            <div class="job-title">Développeur Indépendant</div>
+                            <div class="job-title">Développeur Full Stack Indépendant</div>
                             <div class="job-company"><i class="bi bi-building"></i> Appanoo Labs — Montréal, QC</div>
                         </div>
                         <span class="job-period">Oct. 2018 – Déc. 2020</span>
                     </div>
+                    <p class="summary-text" style="font-size:0.85rem; color: var(--text-muted); margin: 0.15rem 0 0;">Mandats freelance, en parallèle des études puis du poste au CIUSSS</p>
                     <ul>
-                        <li>Accompagnement de startups et PME dans la définition de leurs besoins techniques et la livraison d’applications web sur mesure avec <strong>Django et Node.js</strong>.</li>
-                        <li>Conception et intégration d’<strong>APIs RESTful</strong> robustes (authentification JWT, documentation OpenAPI) reliant des systèmes internes à des services tiers.</li>
-                        <li>Mise en place de pipelines <strong>CI/CD</strong> avec Docker et Heroku, réduisant les cycles de déploiement de plusieurs heures à moins de <strong>15 minutes</strong>.</li>
+                        <li>Livraison complète d’applications web sur mesure pour startups et PME — backend <strong>Django/Python et Node.js</strong>, interfaces <strong>React</strong> — de la définition du besoin avec le client jusqu’à la mise en production.</li>
+                        <li>Conception d’<strong>APIs REST sécurisées</strong> (authentification JWT, contrôle d’accès) documentées en OpenAPI, reliant systèmes internes et services tiers.</li>
+                        <li>Mise en place de pipelines <strong>CI/CD conteneurisés</strong> (Docker), ramenant les cycles de déploiement de plusieurs heures à moins de <strong>15 minutes</strong>.</li>
                     </ul>
                 </div>
 
@@ -536,54 +542,74 @@ export function getFrenchResume() {
             <div class="skills-group">
                 <div class="skills-label">Langages</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-lang">PHP</span>
-                    <span class="badge-skill badge-lang">JavaScript</span>
-                    <span class="badge-skill badge-lang">TypeScript</span>
                     <span class="badge-skill badge-lang">Python</span>
                     <span class="badge-skill badge-lang">SQL</span>
-                    <span class="badge-skill badge-lang">Rust</span>
-                    <span class="badge-skill badge-lang">C/C++</span>
+                    <span class="badge-skill badge-lang">TypeScript</span>
+                    <span class="badge-skill badge-lang">JavaScript</span>
+                    <span class="badge-skill badge-lang">PHP</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Frameworks & Librairies</div>
+                <div class="skills-label">Backend</div>
                 <div class="skills-badges">
                     <span class="badge-skill badge-fw">Symfony</span>
-                    <span class="badge-skill badge-fw">Laravel</span>
-                    <span class="badge-skill badge-fw">Slim PHP</span>
+                    <span class="badge-skill badge-fw">Doctrine ORM</span>
+                    <span class="badge-skill badge-fw">PHP</span>
+                    <span class="badge-skill badge-fw">Slim</span>
                     <span class="badge-skill badge-fw">Django</span>
                     <span class="badge-skill badge-fw">Node.js</span>
-                    <span class="badge-skill badge-fw">Knockout.js</span>
+                    <span class="badge-skill badge-fw">REST / OpenAPI</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">Frontend</div>
+                <div class="skills-badges">
+                    <span class="badge-skill badge-front">TypeScript</span>
+                    <span class="badge-skill badge-front">React</span>
+                    <span class="badge-skill badge-front">Knockout.js (MVVM, data-binding)</span>
+                    <span class="badge-skill badge-front">Vite</span>
+                    <span class="badge-skill badge-front">Webpack</span>
+                    <span class="badge-skill badge-front">SPA & routage côté client</span>
                 </div>
             </div>
             <div class="skills-group">
                 <div class="skills-label">Bases de données</div>
                 <div class="skills-badges">
+                    <span class="badge-skill badge-db">SQL Server</span>
                     <span class="badge-skill badge-db">MySQL</span>
                     <span class="badge-skill badge-db">PostgreSQL</span>
-                    <span class="badge-skill badge-db">MongoDB</span>
                     <span class="badge-skill badge-db">Redis</span>
-                    <span class="badge-skill badge-db">SQL Server</span>
+                    <span class="badge-skill badge-db">MongoDB</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Outils & DevOps</div>
+                <div class="skills-label">DevOps & CI/CD</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-tools">Git</span>
                     <span class="badge-skill badge-tools">Docker</span>
-                    <span class="badge-skill badge-tools">Jenkins</span>
                     <span class="badge-skill badge-tools">GitHub Actions</span>
-                    <span class="badge-skill badge-tools">Jira</span>
-                    <span class="badge-skill badge-tools">Power BI</span>
+                    <span class="badge-skill badge-tools">Jenkins</span>
+                    <span class="badge-skill badge-tools">Git</span>
+                    <span class="badge-skill badge-tools">PHPUnit</span>
+                    <span class="badge-skill badge-tools">AWS (S3, EC2 — connaissances personnelles)</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Méthodologies</div>
+                <div class="skills-label">Pratiques</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-meth">Agile</span>
-                    <span class="badge-skill badge-meth">Scrum</span>
-                    <span class="badge-skill badge-meth">CI/CD</span>
+                    <span class="badge-skill badge-meth">Architecture logicielle</span>
+                    <span class="badge-skill badge-meth">Code review</span>
                     <span class="badge-skill badge-meth">TDD</span>
+                    <span class="badge-skill badge-meth">Sécurité applicative (JWT, contrôle d’accès)</span>
+                    <span class="badge-skill badge-meth">Agile/Scrum</span>
+                    <span class="badge-skill badge-meth">Jira</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">IA appliquée au développement</div>
+                <div class="skills-badges">
+                    <span class="badge-skill badge-ai">Claude Code</span>
+                    <span class="badge-skill badge-ai">Codex</span>
+                    <span class="badge-skill badge-ai">Cursor</span>
                 </div>
             </div>
         </section>
@@ -593,7 +619,7 @@ export function getFrenchResume() {
             <div class="edu-card">
                 <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
                 <div>
-                    <div class="edu-degree">Diplôme d’études collégiales (DEC) — Informatique</div>
+                    <div class="edu-degree">DEC en Techniques de l’informatique</div>
                     <div class="edu-school">Collège de Rosemont, Montréal &nbsp;·&nbsp; 2017 – 2020</div>
                 </div>
             </div>
@@ -636,8 +662,9 @@ export function getEnglishResume() {
         <div class="container text-center">
             <div class="avatar">CL</div>
             <h1>Clifford Laserre</h1>
-            <p class="subtitle">Full Stack Developer · PHP · Node.js · Python</p>
+            <p class="subtitle">Full Stack Developer · PHP / Symfony</p>
             <div class="contact-links">
+                <a href="tel:+15149675802"><i class="bi bi-telephone-fill"></i> 514-967-5802</a>
                 <a href="mailto:claserre9@gmail.com"><i class="bi bi-envelope-fill"></i> claserre9@gmail.com</a>
                 <a href="https://github.com/claserre9" target="_blank"><i class="bi bi-github"></i> claserre9</a>
                 <a href="https://linkedin.com/in/cliffordlaserre" target="_blank"><i class="bi bi-linkedin"></i> Clifford Laserre</a>
@@ -654,11 +681,12 @@ export function getEnglishResume() {
         <section>
             <div class="section-title"><i class="bi bi-person-lines-fill"></i> Profile</div>
             <p class="summary-text">
-                Full Stack Developer with over <strong>5 years of experience</strong> designing and building
-                high-performance, scalable web applications. Expert in <strong>PHP, Symfony, Node.js, and Django</strong>,
-                with deep knowledge of CMS architecture, performance optimization, and relational/NoSQL database
-                integration. Active open-source contributor passionate about solving complex engineering challenges
-                through clean, maintainable, and well-tested code.
+                Full stack developer with <strong>7 years of experience</strong>, primarily in <strong>PHP and Symfony</strong>,
+                designing, optimizing, and maintaining high-traffic web systems (<strong>10M+ monthly visitors</strong>) within
+                a team environment. Strong command of the Symfony ecosystem (Doctrine ORM, MVC architecture, REST APIs),
+                complemented by solid <strong>Django/Python</strong> and <strong>Node.js</strong> experience. Comfortable with code review, automated testing,
+                and documentation while collaborating closely across multiple teams. Focused on code quality,
+                maintainability, and application performance.
             </p>
         </section>
 
@@ -673,14 +701,16 @@ export function getEnglishResume() {
                             <div class="job-title">Full Stack Developer</div>
                             <div class="job-company"><i class="bi bi-building"></i> Valnet Inc — Montreal, QC</div>
                         </div>
-                        <span class="job-period">May 2021 – Present</span>
+                        <span class="job-period">May 2021 – Aug. 2026</span>
                     </div>
                     <ul>
-                        <li>Designed and delivered new features for the internal CMS using <strong>Slim Framework, Doctrine ORM, and Knockout.js</strong>, supporting platforms with over <strong>10 million monthly visitors</strong>.</li>
-                        <li>Reduced page load times by <strong>40%</strong> through advanced <strong>Redis</strong> caching strategies (query caching, session caching, application-level cache), significantly improving user experience under peak traffic.</li>
-                        <li>Optimized <strong>MySQL and Redis</strong> databases by refactoring schemas, rewriting critical queries, and adding targeted indexes to sustain performance at scale.</li>
-                        <li>Established a comprehensive unit and integration testing suite (PHPUnit), reducing production incident rates and enabling confident continuous deployments.</li>
-                        <li>Actively contributed to content publishing workflows via <strong>Symfony</strong>, including code reviews, merge request management, and adherence to team engineering standards.</li>
+                        <li>Developed and maintained a <strong>critical internal CMS</strong> (PHP/Slim, Doctrine ORM, Knockout.js) used continuously by editorial teams, supporting platforms with <strong>10M+ monthly visitors</strong> — consistent focus on reliability and code clarity.</li>
+                        <li>Worked closely with editorial and product teams to clarify requirements, balance technical debt against over-engineering, and ship features suited to the real constraints of internal users.</li>
+                        <li>Designed and deployed <strong>PHPUnit</strong> test suites (unit and integration) integrated into continuous deployment pipelines, significantly reducing production incidents.</li>
+                        <li>Delivered end-to-end work: data modeling, internal REST APIs, <strong>TypeScript/Knockout.js</strong> front-end interfaces, and deployment tooling — technical consistency maintained across the full stack.</li>
+                        <li>Cut load times by <strong>40%</strong> through a multi-level <strong>Redis</strong> caching strategy (queries, sessions, application data).</li>
+                        <li>Optimized <strong>MySQL</strong> schemas and queries under heavy load: refactored critical queries, targeted indexing, execution plan analysis.</li>
+                        <li>Shipped migrations and changes with a consistent focus on minimizing downtime on systems running in continuous production.</li>
                     </ul>
                 </div>
 
@@ -689,14 +719,14 @@ export function getEnglishResume() {
                     <div class="job-header">
                         <div>
                             <div class="job-title">Business Intelligence Technician</div>
-                            <div class="job-company"><i class="bi bi-building"></i> CIUSSS — Montreal, QC</div>
+                            <div class="job-company"><i class="bi bi-building"></i> CIUSSS du Centre-Sud-de-l'Île-de-Montréal — Montreal, QC</div>
                         </div>
                         <span class="job-period">Dec. 2019 – May 2021</span>
                     </div>
                     <ul>
-                        <li>Built <strong>Power BI dashboards</strong> and analytical reports for <strong>8+ departments</strong>, enabling faster clinical and administrative decision-making.</li>
-                        <li>Designed and automated <strong>ETL pipelines</strong> (SQL Server Integration Services), cutting manual data processing time by <strong>60%</strong>.</li>
-                        <li>Optimized complex <strong>SQL Server</strong> queries (execution plans, indexing, materialized views), improving report generation speed by over <strong>50%</strong>.</li>
+                        <li>Optimized complex <strong>SQL Server</strong> queries (indexing, materialized views, rewrites), improving report generation by <strong>50%</strong> on large data volumes.</li>
+                        <li>Automated <strong>ETL pipelines</strong> (SSIS), reducing manual data processing time by <strong>60%</strong>.</li>
+                        <li>Designed and deployed <strong>Power BI dashboards</strong> for <strong>8+ departments</strong>, working directly with business partners to translate business needs into actionable metrics.</li>
                     </ul>
                 </div>
 
@@ -704,15 +734,16 @@ export function getEnglishResume() {
                     <div class="timeline-dot"></div>
                     <div class="job-header">
                         <div>
-                            <div class="job-title">Freelance Developer</div>
+                            <div class="job-title">Independent Full Stack Developer</div>
                             <div class="job-company"><i class="bi bi-building"></i> Appanoo Labs — Montreal, QC</div>
                         </div>
                         <span class="job-period">Oct. 2018 – Dec. 2020</span>
                     </div>
+                    <p class="summary-text" style="font-size:0.85rem; color: var(--text-muted); margin: 0.15rem 0 0;">Freelance mandates, alongside studies and later the CIUSSS role</p>
                     <ul>
-                        <li>Partnered with startups and SMEs to define technical requirements and deliver custom web applications using <strong>Django and Node.js</strong>.</li>
-                        <li>Built and integrated robust <strong>RESTful APIs</strong> (JWT auth, OpenAPI documentation) connecting internal systems with third-party services.</li>
-                        <li>Implemented <strong>CI/CD pipelines</strong> with Docker and Heroku, cutting deployment cycles from hours to under <strong>15 minutes</strong>.</li>
+                        <li>Delivered complete custom web applications for startups and SMBs — <strong>Django/Python and Node.js</strong> backends, <strong>React</strong> front ends — from client requirements gathering through to production deployment.</li>
+                        <li>Designed secure <strong>REST APIs</strong> (JWT authentication, access control) documented in OpenAPI, connecting internal systems and third-party services.</li>
+                        <li>Set up containerized <strong>CI/CD pipelines</strong> (Docker), cutting deployment cycles from several hours to under <strong>15 minutes</strong>.</li>
                     </ul>
                 </div>
 
@@ -779,54 +810,74 @@ export function getEnglishResume() {
             <div class="skills-group">
                 <div class="skills-label">Languages</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-lang">PHP</span>
-                    <span class="badge-skill badge-lang">JavaScript</span>
-                    <span class="badge-skill badge-lang">TypeScript</span>
                     <span class="badge-skill badge-lang">Python</span>
                     <span class="badge-skill badge-lang">SQL</span>
-                    <span class="badge-skill badge-lang">Rust</span>
-                    <span class="badge-skill badge-lang">C/C++</span>
+                    <span class="badge-skill badge-lang">TypeScript</span>
+                    <span class="badge-skill badge-lang">JavaScript</span>
+                    <span class="badge-skill badge-lang">PHP</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Frameworks & Libraries</div>
+                <div class="skills-label">Backend</div>
                 <div class="skills-badges">
                     <span class="badge-skill badge-fw">Symfony</span>
-                    <span class="badge-skill badge-fw">Laravel</span>
-                    <span class="badge-skill badge-fw">Slim PHP</span>
+                    <span class="badge-skill badge-fw">Doctrine ORM</span>
+                    <span class="badge-skill badge-fw">PHP</span>
+                    <span class="badge-skill badge-fw">Slim</span>
                     <span class="badge-skill badge-fw">Django</span>
                     <span class="badge-skill badge-fw">Node.js</span>
-                    <span class="badge-skill badge-fw">Knockout.js</span>
+                    <span class="badge-skill badge-fw">REST / OpenAPI</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">Frontend</div>
+                <div class="skills-badges">
+                    <span class="badge-skill badge-front">TypeScript</span>
+                    <span class="badge-skill badge-front">React</span>
+                    <span class="badge-skill badge-front">Knockout.js (MVVM, data-binding)</span>
+                    <span class="badge-skill badge-front">Vite</span>
+                    <span class="badge-skill badge-front">Webpack</span>
+                    <span class="badge-skill badge-front">SPAs & client-side routing</span>
                 </div>
             </div>
             <div class="skills-group">
                 <div class="skills-label">Databases</div>
                 <div class="skills-badges">
+                    <span class="badge-skill badge-db">SQL Server</span>
                     <span class="badge-skill badge-db">MySQL</span>
                     <span class="badge-skill badge-db">PostgreSQL</span>
-                    <span class="badge-skill badge-db">MongoDB</span>
                     <span class="badge-skill badge-db">Redis</span>
-                    <span class="badge-skill badge-db">SQL Server</span>
+                    <span class="badge-skill badge-db">MongoDB</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Tools & DevOps</div>
+                <div class="skills-label">DevOps & CI/CD</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-tools">Git</span>
                     <span class="badge-skill badge-tools">Docker</span>
-                    <span class="badge-skill badge-tools">Jenkins</span>
                     <span class="badge-skill badge-tools">GitHub Actions</span>
-                    <span class="badge-skill badge-tools">Jira</span>
-                    <span class="badge-skill badge-tools">Power BI</span>
+                    <span class="badge-skill badge-tools">Jenkins</span>
+                    <span class="badge-skill badge-tools">Git</span>
+                    <span class="badge-skill badge-tools">PHPUnit</span>
+                    <span class="badge-skill badge-tools">AWS (personal knowledge — S3, EC2)</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-label">Methodologies</div>
+                <div class="skills-label">Practices</div>
                 <div class="skills-badges">
-                    <span class="badge-skill badge-meth">Agile</span>
-                    <span class="badge-skill badge-meth">Scrum</span>
-                    <span class="badge-skill badge-meth">CI/CD</span>
+                    <span class="badge-skill badge-meth">Software architecture</span>
+                    <span class="badge-skill badge-meth">Code review</span>
                     <span class="badge-skill badge-meth">TDD</span>
+                    <span class="badge-skill badge-meth">Application security (JWT, access control)</span>
+                    <span class="badge-skill badge-meth">Agile/Scrum</span>
+                    <span class="badge-skill badge-meth">Jira</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">AI-Assisted Development</div>
+                <div class="skills-badges">
+                    <span class="badge-skill badge-ai">Claude Code</span>
+                    <span class="badge-skill badge-ai">Codex</span>
+                    <span class="badge-skill badge-ai">Cursor</span>
                 </div>
             </div>
         </section>
@@ -836,7 +887,7 @@ export function getEnglishResume() {
             <div class="edu-card">
                 <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
                 <div>
-                    <div class="edu-degree">Diploma of College Studies (DEC) — Computer Science</div>
+                    <div class="edu-degree">DEC, Computer Science Technology</div>
                     <div class="edu-school">Collège de Rosemont, Montreal &nbsp;·&nbsp; 2017 – 2020</div>
                 </div>
             </div>
