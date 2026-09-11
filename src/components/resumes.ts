@@ -466,7 +466,7 @@ export function getFrenchResume() {
                         </div>
                         <span class="job-period">Mai 2021 – Août 2026</span>
                     </div>
-                    <p class="summary-text">Développement full stack en <strong>PHP (Symfony, Slim), Doctrine ORM et TypeScript/Knockout.js</strong>, autour d’un CMS interne utilisé par les équipes éditoriales de sites accueillant plus de <strong>10 millions de visiteurs par mois</strong>.</p>
+                    <p class="summary-text">Développement de sites web sous <strong>PHP/Symfony</strong> accueillant plus de <strong>10 millions de visiteurs par mois</strong>, et du CMS interne utilisé par les équipes éditoriales : backend en <strong>PHP/Slim</strong>, frontend en <strong>Knockout.js et TypeScript</strong>.</p>
                     <ul>
                         <li>Implémentation de la <strong>gestion des pages statiques</strong> : création dans le CMS et synchronisation vers les sites web.</li>
                         <li>Développement d’une <strong>interface de gestion des vidéos</strong> permettant aux rédacteurs d’insérer une ou plusieurs vidéos dans leurs articles ; contribution à l’intégration de contenus embarqués (embeds).</li>
@@ -756,7 +756,7 @@ export function getEnglishResume() {
                         </div>
                         <span class="job-period">May 2021 – Aug. 2026</span>
                     </div>
-                    <p class="summary-text">Full stack development with <strong>PHP (Symfony, Slim), Doctrine ORM, and TypeScript/Knockout.js</strong>, supporting an internal CMS used by editorial teams across websites serving more than <strong>10 million visitors per month</strong>.</p>
+                    <p class="summary-text">Developed websites built with <strong>PHP/Symfony</strong> serving more than <strong>10 million visitors per month</strong>, alongside the internal CMS used by editorial teams, with a <strong>PHP/Slim</strong> backend and a <strong>Knockout.js and TypeScript</strong> frontend.</p>
                     <ul>
                         <li>Implemented <strong>static page management</strong>, from page creation in the CMS to synchronization with the websites.</li>
                         <li>Built a <strong>video management interface</strong> enabling writers to insert one or more videos into their articles; contributed to support for embedded content.</li>
