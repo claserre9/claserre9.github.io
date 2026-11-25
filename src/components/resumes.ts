@@ -449,7 +449,8 @@ export function getFrenchResume() {
                 (Doctrine ORM, architecture MVC, API REST) est complétée par une solide expérience en
                 <strong>Django/Python</strong> et <strong>Node.js</strong>. Je privilégie une collaboration étroite avec l’équipe,
                 des revues de code rigoureuses, des tests automatisés et une documentation claire pour développer
-                des applications performantes, fiables et faciles à maintenir.
+                des applications performantes, fiables et faciles à maintenir. Au quotidien, je travaille avec <strong>Claude Code</strong> et <strong>Codex</strong>,
+                branchés par MCP sur Jira et YouTrack, pour documenter les tickets et écrire des tests unitaires et fonctionnels.
             </p>
         </section>
 
@@ -475,6 +476,7 @@ export function getFrenchResume() {
                         <li>Création d’<strong>utilitaires internes en Knockout.js</strong>, notamment des fonctionnalités de glisser-déposer pour les interfaces du CMS.</li>
                         <li>Maintenance et refactorisation du code pour améliorer les performances et les pratiques de développement ; optimisation du cache <strong>Redis</strong> et des requêtes <strong>MySQL</strong>.</li>
                         <li>Intégration de tests unitaires et d’intégration <strong>PHPUnit</strong> aux pipelines de déploiement pour fiabiliser les mises en production.</li>
+                        <li>Diagnostic des erreurs en production à partir des journaux <strong>Grafana</strong>, correction et documentation de la cause.</li>
                     </ul>
                 </div>
 
@@ -520,8 +522,43 @@ export function getFrenchResume() {
         </section>
 
         <section>
-            <div class="section-title"><i class="bi bi-code-slash"></i> Projets Open-Source</div>
+            <div class="section-title"><i class="bi bi-code-slash"></i> Projets</div>
             <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">
+                        NET &amp; CO.
+                        <span class="project-year">2026</span>
+                        <a href="https://netetco.ca" target="_blank" class="project-github" title="Voir le site"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                    <p class="project-desc">
+                        Site d’une entreprise d’entretien ménager résidentiel et commercial de la région de Mascouche, avec pages de services
+                        et formulaire de demande de soumission. En ligne sur netetco.ca.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Symfony</span>
+                        <span class="project-tag">Twig</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Doctrine</span>
+                        <span class="project-tag">Cloudflare</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">
+                        claserre9.com
+                        <span class="project-year">2026</span>
+                        <a href="https://claserre9.com" target="_blank" class="project-github" title="Voir le site"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                    <p class="project-desc">
+                        Portfolio bilingue (français et anglais) qui présente mes projets, mon expertise et mon parcours,
+                        avec une page de contact.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Symfony</span>
+                        <span class="project-tag">Stimulus</span>
+                        <span class="project-tag">Turbo</span>
+                        <span class="project-tag">Cloudflare</span>
+                    </div>
+                </div>
                 <div class="project-card">
                     <div class="project-title">
                         Vite Quiz Game
@@ -644,6 +681,7 @@ export function getFrenchResume() {
                     <span class="badge-skill badge-tools">Jenkins</span>
                     <span class="badge-skill badge-tools">Git</span>
                     <span class="badge-skill badge-tools">PHPUnit</span>
+                    <span class="badge-skill badge-tools">Grafana</span>
                     <span class="badge-skill badge-tools">AWS (S3, EC2 — connaissances personnelles)</span>
                 </div>
             </div>
@@ -655,7 +693,7 @@ export function getFrenchResume() {
                     <span class="badge-skill badge-meth">TDD</span>
                     <span class="badge-skill badge-meth">Sécurité applicative (JWT, contrôle d’accès)</span>
                     <span class="badge-skill badge-meth">Agile/Scrum</span>
-                    <span class="badge-skill badge-meth">Jira</span>
+                    <span class="badge-skill badge-meth">Jira, YouTrack</span>
                 </div>
             </div>
             <div class="skills-group">
@@ -664,6 +702,8 @@ export function getFrenchResume() {
                     <span class="badge-skill badge-ai">Claude Code</span>
                     <span class="badge-skill badge-ai">Codex</span>
                     <span class="badge-skill badge-ai">Cursor</span>
+                    <span class="badge-skill badge-ai">Serveurs MCP (Jira, YouTrack)</span>
+                    <span class="badge-skill badge-ai">Tests unitaires et fonctionnels assistés</span>
                 </div>
             </div>
         </section>
@@ -739,7 +779,8 @@ export function getEnglishResume() {
                 (Doctrine ORM, MVC architecture, REST APIs) is complemented by solid experience with
                 <strong>Django/Python</strong> and <strong>Node.js</strong>. I combine close team collaboration,
                 thorough code reviews, automated testing, and clear documentation to build reliable,
-                maintainable applications that perform at scale.
+                maintainable applications that perform at scale. Day to day, I work with <strong>Claude Code</strong> and <strong>Codex</strong>,
+                connected through MCP to Jira and YouTrack, to document tickets and write unit and functional tests.
             </p>
         </section>
 
@@ -765,6 +806,7 @@ export function getEnglishResume() {
                         <li>Created <strong>internal Knockout.js utilities</strong>, including drag-and-drop functionality for CMS interfaces.</li>
                         <li>Maintained and refactored code to improve performance and development practices; optimized <strong>Redis</strong> caching and <strong>MySQL</strong> queries.</li>
                         <li>Integrated <strong>PHPUnit</strong> unit and integration tests into deployment pipelines to improve release reliability.</li>
+                        <li>Diagnosed production errors from <strong>Grafana</strong> logs, fixed them, and documented the root cause.</li>
                     </ul>
                 </div>
 
@@ -810,8 +852,43 @@ export function getEnglishResume() {
         </section>
 
         <section>
-            <div class="section-title"><i class="bi bi-code-slash"></i> Open-Source Projects</div>
+            <div class="section-title"><i class="bi bi-code-slash"></i> Projects</div>
             <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">
+                        NET &amp; CO.
+                        <span class="project-year">2026</span>
+                        <a href="https://netetco.ca" target="_blank" class="project-github" title="Visit site"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                    <p class="project-desc">
+                        Website for a residential and commercial cleaning company in the Mascouche area, with service pages
+                        and a quote request form. Live at netetco.ca.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Symfony</span>
+                        <span class="project-tag">Twig</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Doctrine</span>
+                        <span class="project-tag">Cloudflare</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">
+                        claserre9.com
+                        <span class="project-year">2026</span>
+                        <a href="https://claserre9.com" target="_blank" class="project-github" title="Visit site"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                    <p class="project-desc">
+                        Bilingual (French and English) portfolio presenting my projects, expertise, and career,
+                        with a contact page.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Symfony</span>
+                        <span class="project-tag">Stimulus</span>
+                        <span class="project-tag">Turbo</span>
+                        <span class="project-tag">Cloudflare</span>
+                    </div>
+                </div>
                 <div class="project-card">
                     <div class="project-title">
                         Vite Quiz Game
@@ -934,6 +1011,7 @@ export function getEnglishResume() {
                     <span class="badge-skill badge-tools">Jenkins</span>
                     <span class="badge-skill badge-tools">Git</span>
                     <span class="badge-skill badge-tools">PHPUnit</span>
+                    <span class="badge-skill badge-tools">Grafana</span>
                     <span class="badge-skill badge-tools">AWS (personal knowledge — S3, EC2)</span>
                 </div>
             </div>
@@ -945,7 +1023,7 @@ export function getEnglishResume() {
                     <span class="badge-skill badge-meth">TDD</span>
                     <span class="badge-skill badge-meth">Application security (JWT, access control)</span>
                     <span class="badge-skill badge-meth">Agile/Scrum</span>
-                    <span class="badge-skill badge-meth">Jira</span>
+                    <span class="badge-skill badge-meth">Jira, YouTrack</span>
                 </div>
             </div>
             <div class="skills-group">
@@ -954,6 +1032,8 @@ export function getEnglishResume() {
                     <span class="badge-skill badge-ai">Claude Code</span>
                     <span class="badge-skill badge-ai">Codex</span>
                     <span class="badge-skill badge-ai">Cursor</span>
+                    <span class="badge-skill badge-ai">MCP servers (Jira, YouTrack)</span>
+                    <span class="badge-skill badge-ai">AI-assisted unit and functional tests</span>
                 </div>
             </div>
         </section>

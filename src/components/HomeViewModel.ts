@@ -6,8 +6,8 @@ export default class HomeViewModel extends BaseViewModel {
     public year = observable(new Date().getFullYear());
     constructor(context: PageJS.Context | undefined) {
         super(context);
-        if (context?.path.includes("en"))
-            this.template = getEnglishResume();
-        else this.template = getFrenchResume();
+        const isEnglish = !!context?.path.includes("en");
+        this.template = isEnglish ? getEnglishResume() : getFrenchResume();
+        document.documentElement.lang = isEnglish ? "en" : "fr";
     }
 }

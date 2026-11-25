@@ -5,6 +5,26 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
+const fs = require("fs");
+const ts = require("typescript");
+
+// Load the resume templates (plain TS functions) so each page can be prerendered.
+// Without this, crawlers and tools that don't run JavaScript only see an empty #app.
+function loadResumes() {
+	const file = path.resolve(__dirname, "src/components/resumes.ts");
+	const { outputText } = ts.transpileModule(fs.readFileSync(file, "utf8"), {
+		compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2019 },
+	});
+	const mod = { exports: {} };
+	new Function("module", "exports", outputText)(mod, mod.exports);
+	return mod.exports;
+}
+
+function prerender(html) {
+	return html
+		.replace('<span data-bind="text: year"></span>', `<span data-bind="text: year">${new Date().getFullYear()}</span>`);
+}
+
 module.exports = (env, argv) => {
 	const isProduction = argv.mode === "production";
 
@@ -14,6 +34,29 @@ module.exports = (env, argv) => {
 		public: path.resolve(__dirname, "public"), // Static files folder
 		output: path.resolve(__dirname, "dist"), // Build output folder
 	};
+
+	const resumes = loadResumes();
+	const htmlMinify = isProduction
+		? {
+			collapseWhitespace: true,
+			removeComments: true,
+			removeRedundantAttributes: true,
+			useShortDoctype: true,
+			removeEmptyAttributes: true,
+			removeStyleLinkTypeAttributes: true,
+			keepClosingSlash: true,
+			minifyJS: true,
+			minifyCSS: true,
+		}
+		: false;
+	const page = (filename, lang, body) =>
+		new HtmlWebpackPlugin({
+			template: path.join(paths.src, "index.html"),
+			filename,
+			lang,
+			appHtml: prerender(body),
+			minify: htmlMinify,
+		});
 
 	return {
 		// Entry point for your application
@@ -123,23 +166,9 @@ module.exports = (env, argv) => {
 
 		// Plugins
 		plugins: [
-			new HtmlWebpackPlugin({
-				template: path.join(paths.src, "index.html"),
-				filename: "index.html",
-				minify: isProduction
-					? {
-						collapseWhitespace: true,
-						removeComments: true,
-						removeRedundantAttributes: true,
-						useShortDoctype: true,
-						removeEmptyAttributes: true,
-						removeStyleLinkTypeAttributes: true,
-						keepClosingSlash: true,
-						minifyJS: true,
-						minifyCSS: true,
-					}
-					: false,
-			}),
+			// One fully rendered HTML file per language: / (French) and /en/ (English).
+			page("index.html", "fr", resumes.getFrenchResume()),
+			page("en/index.html", "en", resumes.getEnglishResume()),
 			new MiniCssExtractPlugin({
 				filename: isProduction
 					? "css/[name].[contenthash].css"
